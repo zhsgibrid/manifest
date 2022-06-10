@@ -1,9 +1,19 @@
+body {
+    font-family: $main-font;
+}
+
 .container{
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+.logo {
+    min-width: 135px;
+    display: block;
+    margin-right: 50px;
+    z-index: 10;
+    position: relative;
+}
 .title{
     font-weight: 400;
     font-size: 48px;
@@ -19,6 +29,7 @@ font-size: 23px;
 line-height: 166%;
 letter-spacing: 0.1em;
 color: $color-black;
+font-family: $sub-font;
 }
 .text{
     font-weight: 400;
@@ -26,4 +37,9 @@ color: $color-black;
     line-height: 32px;
     letter-spacing: 0.05em;
     color: $color-text; 
+    
+    @media (max-width: $tab) {
+        font-size: 16px;
+        line-height: 27px;
+    }
 }

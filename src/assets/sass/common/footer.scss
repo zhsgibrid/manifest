@@ -1,29 +1,42 @@
 .footer{
-    max-width: 1440px;
     width: 100%;
-    max-height: 435px;
+    height: 435px;
     background-color: #F4F4F4;
     padding: 128px;
+ 
+    @media screen and (max-width: $tab) { 
+    height: 586px;
+      padding: 0;
+    }
     &__container{
-        height: 180px;
-        height: 100%;
-        width: 1120px;
-        
-        // margin-left: $left_marging;
-
-    //    padding-left: 160px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 180px;
+        height: 100%;
 
+        @media screen and (max-width: $tab) { 
+           justify-content: start;
+               display: flex;
+    flex-direction: column;
+    position: static;
+        }
     }
     &__title{
-        align-self: flex-start;
+       
         .title{
-            // position:static;
             margin-bottom: 32px;
-            
+            @media screen and (max-width: $tab) {
+                
+                font-weight: 400;
+                font-size: 33px;
+                line-height: 50px;
+                letter-spacing: 0.05em;
+                padding-top: 64px;
+                margin-bottom: 18px;
+            }
         }
+
         .title-number{
             font-family: $main-font;
             font-weight: 400;
@@ -31,8 +44,8 @@
             line-height: 27px;
             letter-spacing: 0.1em;
             color:$color-black;
-
             margin-bottom: 16px;
+           
         }
         .title-email{
             font-family: $main-font;
@@ -41,6 +54,9 @@
             line-height: 27px;
             letter-spacing: 0.1em;
             color:$color-black;
+            @media (max-width: $tab){
+              margin-bottom: 28px;
+               }
         }
     }
     &__list{ 
@@ -52,25 +68,34 @@
         letter-spacing: 0.1em;
 
         color:  $color-black;
-
+        @media (max-width: $tab){
+            width: 257px;
+           }
         .list{
             margin-bottom: 24px;
+          
         }
         .list:last-child{
             margin-bottom: 0;
+            @media (max-width: $tab){
+                margin-bottom: 28px;
+               }
         }
     }
     
     &__copyright{
         width: 208px;
         align-self: flex-end;
-       
+       @media (max-width: $tab){
+        align-self: center;
+        margin-bottom: 68px;
+        width: 257px;
+       }
     
         .copyright{
             font-family: $main-font;
             font-size: 12px;
             line-height: 20px;
-    /* or 20px */
             letter-spacing: 0.1em;
             color: $color-black;
 
