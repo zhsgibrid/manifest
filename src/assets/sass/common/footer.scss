@@ -11,15 +11,15 @@
     &__container{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         height: 180px;
         height: 100%;
-
+       
         @media screen and (max-width: $tab) { 
-           justify-content: start;
-               display: flex;
-    flex-direction: column;
-    position: static;
+            justify-content: start;
+            display: flex;
+            flex-direction: column;
+            position: static;
         }
     }
     &__title{
@@ -27,47 +27,23 @@
         .title{
             margin-bottom: 32px;
             @media screen and (max-width: $tab) {
-                
-                font-weight: 400;
-                font-size: 33px;
-                line-height: 50px;
-                letter-spacing: 0.05em;
                 padding-top: 64px;
                 margin-bottom: 18px;
             }
         }
 
-        .title-number{
-            font-family: $main-font;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 27px;
-            letter-spacing: 0.1em;
-            color:$color-black;
+        .h5-number{
             margin-bottom: 16px;
            
         }
-        .title-email{
-            font-family: $main-font;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 27px;
-            letter-spacing: 0.1em;
-            color:$color-black;
+        .h5-email{
+           
             @media (max-width: $tab){
               margin-bottom: 28px;
                }
         }
     }
-    &__list{ 
-          
-        font-family: $main-font;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 166%;
-        letter-spacing: 0.1em;
-
-        color:  $color-black;
+    &__h5{ 
         @media (max-width: $tab){
             width: 257px;
            }
@@ -91,15 +67,7 @@
         margin-bottom: 68px;
         width: 257px;
        }
-    
-        .copyright{
-            font-family: $main-font;
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 0.1em;
-            color: $color-black;
 
-        }
     }
    
 }
